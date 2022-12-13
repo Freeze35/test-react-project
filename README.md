@@ -5,6 +5,58 @@
 Этот проект был загружен с помощью [Create React App]/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### useState() = https://reactjs.org/docs/hooks-state.html / https://www.w3schools.com/react/react_usestate.asp
+Первое значение count— это наше текущее состояние./ The first value of count is our current state.
+Второе значение — setCount функция, которая используется для обновления нашего состояния./ The second value is the setCount function, which is used to update our state.
+
+``` import React, { useState } from 'react';
+
+   function Example() {
+     const [count, setCount] = useState(0);
+
+      return (
+        <div>
+             <p>You clicked {count} times</p>
+                <button onClick={() => setCount(count + 1)}>
+                  Click me
+                </button>
+         </div>);}
+```
+### useEffect() = https://www.w3schools.com/react/react_useeffect.asp
+Хук useEffect позволяет вам выполнять побочные эффекты в ваших компонентах.
+Некоторые примеры побочных эффектов: выборка данных, непосредственное обновление DOM и таймеры.
+useEffectпринимает два аргумента. Второй аргумент является необязательным. Если оставить пустую зависимость функция повторяться, Если поставить [] рендеринг будет происхродить 1 раз происходить только один раз.(При изменении зависимости [dependence] происходит повторный ренндер <function>).
+
+useEffect(<function>, <dependency>)
+   
+Хук useEffect построен таким образом, что мы можем вернуть функцию внутри него, и именно в этой функции возврата происходит очистка. Функция очистки предотвращает утечку памяти и устраняет некоторые ненужные и нежелательные действия. https://daily-dev-tips.com/posts/react-useeffect-cleanup/
+   
+```    import { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+    setCount((count) => count + 1);
+  }, 1000);
+
+  return () => clearTimeout(timer)
+  }, []);
+
+  return <h1>I've rendered {count} times!</h1>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Timer />);
+``` 
+   
+### useRef() =
+### useMemo() = 
+### useCallback() =
+### useContext() =
+
 ## Available Scripts
 In the project directory, you can run:
 
@@ -52,51 +104,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 ### Deployment
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-### useState() = https://reactjs.org/docs/hooks-state.html / https://www.w3schools.com/react/react_usestate.asp
-Первое значение count— это наше текущее состояние./ The first value of count is our current state.
-Второе значение — setCount функция, которая используется для обновления нашего состояния./ The second value is the setCount function, which is used to update our state.
-
-``` import React, { useState } from 'react';
-
-   function Example() {
-     const [count, setCount] = useState(0);
-
-      return (
-        <div>
-             <p>You clicked {count} times</p>
-                <button onClick={() => setCount(count + 1)}>
-                  Click me
-                </button>
-         </div>);}
-```
-### useEffect() = https://www.w3schools.com/react/react_useeffect.asp
-Хук useEffectпозволяет вам выполнять побочные эффекты в ваших компонентах.
-Некоторые примеры побочных эффектов: выборка данных, непосредственное обновление DOM и таймеры.
-useEffectпринимает два аргумента. Второй аргумент является необязательным(При изменении зависимости происходит повторный ренндер <function>).
-useEffect(<function>, <dependency>)
-   
-```    import { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
-
-function Counter() {
-  const [count, setCount] = useState(0);
-  const [calculation, setCalculation] = useState(0);
-
-  useEffect(() => {
-    setCalculation(() => count * 2);
-  }, [count]); // <- add the count variable here
-
-  return (
-    <>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount((c) => c + 1)}>+</button>
-      <p>Calculation: {calculation}</p>
-    </>);}
-``` 
-### useRef() =
-### useMemo() = 
-### useCallback() =
-### useContext() =
+### rsc - быстрое развёртывание снипета для создание формы. 
+   https://habr.com/ru/company/kts/blog/653283/
 

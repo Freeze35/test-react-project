@@ -110,12 +110,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 Here is a simple flow chart:
 
 ```mermaid
-sequenceDiagram;
+graph TD;
     App-->context-->index.js;
     App-->C;
     B-->D;
     C-->D;
 ```
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!

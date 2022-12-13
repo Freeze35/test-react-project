@@ -112,6 +112,10 @@ Here is a simple flow chart:
 ```mermaid
 graph TD;
     App-->context-->index.js_AuthContext-->App;
+    App-->BrowserRouter-->Navbar;
+    BrowserRouter-->AppRouter;
+    Navbar-->BrowserRouter;
+    AppRouter-->BrowserRouter;
     App-->C;
     B-->D;
     C-->D;

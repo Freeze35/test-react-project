@@ -129,15 +129,25 @@ graph TD;
 Posts-->API-->PostService
 Posts-->Posts-->utils-->page
 Posts-->components-->UI-->button-->MyButton
+MyButton-->Posts
 Posts-->components-->UI-->MyModule-->MyModule
+MyModule-->Posts
 Posts-->components-->PostForm
+PostForm-->Posts
 Posts-->components-->PostFilter
+PostFilter-->Posts
 Posts-->components-->UI-->PostList
-Posts-->components-->UI-->Loader/Loader
+PostList-->Posts
+Posts-->components-->UI-->Loader-->Loader
+Loader-->Posts
 Posts-->components-->UI-->Paginatin
+Paginatin-->Posts
 Posts-->hooks-->useFetching
+useFetching-->Posts
 Posts-->hooks-->useObserver
+useObserver-->Posts
 Posts-->components-->UI-->select-->MySelect
+MySelect-->Posts
 ```
 
 ```mermaid

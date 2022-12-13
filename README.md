@@ -123,7 +123,7 @@ graph TD;
    AppRouter-->Login
    Login-->Posts
    AppRouter-->PostIdPage:Open
-   AppRouter-->
+   AppRouter-->Homepage
 ```
 
 ```mermaid

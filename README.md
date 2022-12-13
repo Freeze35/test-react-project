@@ -124,12 +124,14 @@ graph TD;
    Login-->Posts
    AppRouter-->PostIdPage:Open
    AppRouter-->Homepage
+   Posts-->usePosts-->Posts
+   Posts-->utils-->page
 ```
 
 ```mermaid
   sequenceDiagram;
    App->>+context_index.js: AuthContext
-   context-->>App: AuthContext=createContext(null)
+   context_index.js-->>App: AuthContext=createContext(null)
    App->>BrowserRouter:Navbar,AppRouter
    BrowserRouter->>Navbar:Navbar,AppRouter
 ```

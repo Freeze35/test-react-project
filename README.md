@@ -67,19 +67,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 ### useState = https://reactjs.org/docs/hooks-state.html
- 1:  import React, { useState } from 'react';
- 2:
- 3:  function Example() {
- 4:    const [count, setCount] = useState(0);
- 5:
- 6:    return (
- 7:      <div>
- 8:        <p>You clicked {count} times</p>
- 9:        <button onClick={() => setCount(count + 1)}>
-10:         Click me
-11:        </button>
-12:      </div>
-13:    );
-14:  }
+ import React, { useState } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+    return (
+      <div>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>
+         Click me
+        </button>
+      </div>);}
 ### useEffect
 

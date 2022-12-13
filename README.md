@@ -127,18 +127,18 @@ graph TD;
    Posts-->usePosts-->Posts
    Posts-->utils-->page-->Posts
    Posts-->API-->PostService-->Posts
-   Posts-->components-->UI-->MyButton
+   components-->UI-->MyButton
    MyButton-->Posts
-   Posts-->components-->UI-->MyModule-->Posts
-   Posts-->components-->PostForm
+   components-->UI-->MyModule-->Posts
+   components-->PostForm
    PostForm-->Posts
-   Posts-->components-->PostFilter
+   components-->PostFilter
    PostFilter-->Posts
-   Posts-->components-->UI-->PostList
+   components-->UI-->PostList
    PostList-->Posts
-   Posts-->components-->UI-->Loader
+   components-->UI-->Loader
    Loader-->Posts
-   Posts-->components-->UI-->Paginatin
+   components-->UI-->Paginatin
    Paginatin-->Posts
    Posts-->hooks-->useFetching
    useFetching-->Posts

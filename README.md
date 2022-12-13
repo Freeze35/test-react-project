@@ -129,22 +129,22 @@ graph TD;
    Posts-->API-->PostService-->Posts
    components-->UI-->MyButton
    MyButton-->Posts
-   components-->UI-->MyModule-->Posts
+   UI-->MyModule-->Posts
    components-->PostForm
    PostForm-->Posts
    components-->PostFilter
    PostFilter-->Posts
-   components-->UI-->PostList
+   UI-->PostList
    PostList-->Posts
-   components-->UI-->Loader
+   UI-->Loader
    Loader-->Posts
-   components-->UI-->Paginatin
+   UI-->Paginatin
    Paginatin-->Posts
    Posts-->hooks-->useFetching
    useFetching-->Posts
    Posts-->hooks-->useObserver
    useObserver-->Posts
-   Posts-->components-->UI-->select-->MySelect
+   UI-->select-->MySelect
    MySelect-->Posts
    Paginatin-->hooks-->useTotalPosts-->Paginatin
    

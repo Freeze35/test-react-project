@@ -67,7 +67,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-### useState = https://reactjs.org/docs/hooks-state.html
+### useState() = https://reactjs.org/docs/hooks-state.html
 ``` import React, { useState } from 'react';
 
    function Example() {

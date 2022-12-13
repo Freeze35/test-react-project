@@ -66,6 +66,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
+
 ### useState = https://reactjs.org/docs/hooks-state.html
 ``` import React, { useState } from 'react';
 
@@ -74,11 +75,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
       return (
         <div>
-          <p>You clicked {count} times</p>
-          <button onClick={() => setCount(count + 1)}>
-           Click me
-          </button>
-    </div>);}
+             <p>You clicked {count} times</p>
+                <button onClick={() => setCount(count + 1)}>
+                  Click me
+                </button>
+         </div>);}
 ```
 ### useEffect
 

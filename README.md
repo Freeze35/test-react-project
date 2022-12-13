@@ -124,6 +124,6 @@ graph TD;
 
 ``` mermaid
    sequenceDiagram;
-    App->>+context: Hello John, how are you?;
-    context-->>-App: Hello John, how are you?
+    App->>+context: AuthContext;
+    context-->>-App: createContext(null)
 ```

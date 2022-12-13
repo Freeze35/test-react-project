@@ -125,9 +125,10 @@ graph TD;
 ```mermaid
   sequenceDiagram;
    App->>+context: AuthContext
-   context-->>-App: AuthContext=createContext(null)
-   AuthContext.Provider = 
-   isAuth,
-   setIsAuth,
-   isLoading
+   context-->>-App: AuthContext=createContext(null),<AuthContext.Provider value={{
+            isAuth,
+            setIsAuth,
+            isLoading
+        }}>
+   
 ```

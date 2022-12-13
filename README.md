@@ -126,4 +126,5 @@ graph TD;
   sequenceDiagram;
    App->>+context: AuthContext
    context-->>-App: AuthContext=createContext(null)
+   App->>BrowserRouter->>Navbar
 ```

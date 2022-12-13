@@ -126,6 +126,18 @@ graph TD;
    AppRouter-->Homepage
    Posts-->usePosts-->Posts
    Posts-->utils-->page
+Posts-->API-->PostService
+Posts-->Posts-->utils-->page
+Posts-->components-->UI-->button-->MyButton
+Posts-->components-->UI-->MyModule-->MyModule
+Posts-->components-->PostForm
+Posts-->components-->PostFilter
+Posts-->components-->UI-->PostList
+Posts-->components-->UI-->Loader/Loader
+Posts-->components-->UI-->Paginatin
+Posts-->hooks-->useFetching
+Posts-->hooks-->useObserver
+Posts-->components-->UI-->select-->MySelect
 ```
 
 ```mermaid

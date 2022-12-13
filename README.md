@@ -80,4 +80,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
           </button>
     </div>);}
 ### useEffect
+v```js
+import copy from 'copy-to-clipboard';
+
+copy('Text');
+
+// Copy with options
+copy('Text', {
+  debug: true,
+  message: 'Press #{key} to copy',
+});
+```
 

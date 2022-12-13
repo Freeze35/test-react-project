@@ -121,3 +121,10 @@ graph TD;
    AppRouter-->Loader
    Loader-->AppRouter
 ```
+
+``` sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    activate John
+    John-->>Alice: Great!
+    deactivate John
+```

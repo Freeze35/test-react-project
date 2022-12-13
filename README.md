@@ -127,10 +127,9 @@ graph TD;
    Posts-->usePosts-->Posts
    Posts-->utils-->page-->Posts
    Posts-->API-->PostService-->Posts
-   Posts-->components-->UI-->button-->MyButton
+   Posts-->components-->UI-->MyButton
    MyButton-->Posts
-   Posts-->components-->UI-->MyModule-->MyModule
-   MyModule-->Posts
+   Posts-->components-->UI-->MyModule-->Posts
    Posts-->components-->PostForm
    PostForm-->Posts
    Posts-->components-->PostFilter
@@ -147,6 +146,8 @@ graph TD;
    useObserver-->Posts
    Posts-->components-->UI-->select-->MySelect
    MySelect-->Posts
+   Paginatin-->hooks-->useTotalPosts-->Paginatin
+   
 ```
 
 ```mermaid

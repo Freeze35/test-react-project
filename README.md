@@ -111,8 +111,8 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
+    App-->context-->index.js;
+    App-->C;
     B-->D;
     C-->D;
 ```

@@ -122,8 +122,12 @@ graph TD;
    Loader-->AppRouter
 ```
 
-``` mermaid
-   sequenceDiagram;
-    App->>+context: AuthContext
-    context-->>-App: AuthContext=createContext(null)
+```mermaid
+  sequenceDiagram;
+   App->>+context: AuthContext
+   context-->>-App: AuthContext=createContext(null)
+   AuthContext.Provider = 
+   isAuth,
+   setIsAuth,
+   isLoading
 ```

@@ -111,7 +111,7 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD;
-    App-->context-->index.js_AuthContext=createContext(null)-->App;
+    App-->context-->index.js_AuthContext-->App;
     App-->C;
     B-->D;
     C-->D;

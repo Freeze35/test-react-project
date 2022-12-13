@@ -138,7 +138,7 @@ graph TD;
    PostFilter-->Posts
    Posts-->components-->UI-->PostList
    PostList-->Posts
-   Posts-->components-->UI-->Loader-->Loader
+   Posts-->components-->UI-->Loader
    Loader-->Posts
    Posts-->components-->UI-->Paginatin
    Paginatin-->Posts

@@ -116,10 +116,14 @@ graph TD;
    App-->AppRouter
    Navbar-->App
    AppRouter-->App
-   BrowserRouter-->App
    index.js_AuthContext-->AppRouter
    AppRouter-->Loader
    Loader-->AppRouter
+   AppRouter-->Posts
+   AppRouter-->Login
+   Login-->Posts
+   AppRouter-->PostIdPage:Open
+   AppRouter-->
 ```
 
 ```mermaid

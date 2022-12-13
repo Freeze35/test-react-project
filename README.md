@@ -69,15 +69,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### useState = https://reactjs.org/docs/hooks-state.html
  import React, { useState } from 'react';
 
-function Example() {
-  const [count, setCount] = useState(0);
+   function Example() {
+     const [count, setCount] = useState(0);
 
-    return (
-      <div>
-        <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-         Click me
-        </button>
-      </div>);}
+      return (
+        <div>
+          <p>You clicked {count} times</p>
+          <button onClick={() => setCount(count + 1)}>
+           Click me
+          </button>
+    </div>);}
 ### useEffect
 

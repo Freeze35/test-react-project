@@ -147,7 +147,8 @@ graph TD;
    UI-->select-->MySelect
    MySelect-->Posts
    Paginatin-->hooks-->useTotalPosts-->Paginatin
-   
+   PostList-->PostItem
+   PostItem-->PostList
 ```
 
 ```mermaid

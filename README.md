@@ -107,3 +107,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### rsc - быстрое развёртывание снипета для создание формы. 
    https://habr.com/ru/company/kts/blog/653283/
 
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```

@@ -124,8 +124,8 @@ graph TD;
 
 ``` mermaid
    sequenceDiagram;
-    Alice->>John: Hello John, how are you?;
+    App->>context;
     activate John;
-    John-->>Alice: Great!;
+    John-->>App: Great!;
     deactivate John;
 ```

@@ -124,7 +124,7 @@ graph TD;
 
 ```mermaid
   sequenceDiagram;
-   App->>+context: AuthContext
+   App->>+context/index.js: AuthContext
    context-->>-App: AuthContext=createContext(null)
    App->>BrowserRouter:Navbar,AppRouter
    BrowserRouter->>Navbar:Navbar,AppRouter

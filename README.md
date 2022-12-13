@@ -127,7 +127,6 @@ graph TD;
    Posts-->usePosts-->Posts
    Posts-->utils-->page-->Posts
    Posts-->API-->PostService-->Posts
-   Posts-->utils-->page
    Posts-->components-->UI-->button-->MyButton
    MyButton-->Posts
    Posts-->components-->UI-->MyModule-->MyModule

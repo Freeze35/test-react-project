@@ -2,10 +2,16 @@
 ### Пометка для начинающих в создание react приложения.
 
 ## Getting Started with Create React App
+
+###npm install
+
 Этот проект был загружен с помощью [Create React App]/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Ссылка на видеокур по React Js:https://youtu.be/GNrdg3PzpJQ?list=PL6DxKON1uLOFJ5_dDcX7G1osKnsBlCaaT (Я не являюсь автором курса/I am not the author of the course/)
+
 ### useState() = https://reactjs.org/docs/hooks-state.html / https://www.w3schools.com/react/react_usestate.asp
+
 Первое значение count— это наше текущее состояние./ The first value of count is our current state.
 Второе значение — setCount функция, которая используется для обновления нашего состояния./ The second value is the setCount function, which is used to update our state.
 

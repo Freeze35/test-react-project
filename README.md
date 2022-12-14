@@ -3,7 +3,8 @@
 
 ## Getting Started with Create React App
 
-###npm install
+## npm install 
+Понимание того, что такое Node.js поможет вам лучше разобраться с npm. В двух словах — Node.js это интерпретатор языка JavaScript. Сам по себе Node.js является C++ приложением, которое получает на входе JavaScript-код и выполняет его. (https://habr.com/ru/post/243335/)
 
 Этот проект был загружен с помощью [Create React App]/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -59,7 +59,36 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Timer />);
 ``` 
    
-### useRef() = https://www.youtube.com/watch?v=Zn54xUCkh9s
+### useRef() =  
+   useRef Используется в двух сценариях:
+   1) Переменная котороая не приводить к обновлению компонента const ref = useRef()
+   
+   ```function App(){
+      const [counter,setCounter] = useState(0)
+      
+      const ref =useRef();
+      useEffect(()=>{
+         ref,current={
+            counter:0,
+        };
+      },[])
+      
+      return (
+         <div>
+         <button onClicl={()=> ref.current.counter++}>
+            Нажали {counter} раз.
+         </button>
+         <br/>
+         <button onClick={()=>setCounter(ref.current.counter++)}>
+            Обновить
+         </button>
+         </div>
+         );
+   }
+```
+   2) Когда необходимо создать ссылку на элемент компонента и соответсвенно как пример реализации отслеживания элемента.
+   
+   https://www.youtube.com/watch?v=Zn54xUCkh9s
 ### useMemo() = 
 ### useCallback() =
 ### useContext() =

@@ -105,8 +105,9 @@ root.render(<Timer />);
 
    function TodoList({ todos, tab, theme }) {
    const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
-```
 }
+   ```
+
 ### useCallback() =
 ### useContext() =
 

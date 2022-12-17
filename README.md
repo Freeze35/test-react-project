@@ -109,6 +109,23 @@ root.render(<Timer />);
    ```
 
 ### useCallback() =
+   
+   Это позволяет нам изолировать ресурсоемкие функции, чтобы они не запускались автоматически при каждом рендеринге.
+
+Хук useCallbackзапускается только при обновлении одной из его зависимостей.
+
+Это может улучшить производительность.
+
+Крючки useCallbackи useMemoпохожи. Основное отличие состоит в том, что useMemoвозвращает запомненное значение и useCallbackвозвращает запомненную функцию . Вы можете узнать больше о useMemo в главе useMemo.
+```
+   import React, { useCallback } from 'react';
+function MyComponent() {
+  const handleClick = useCallback(() => {
+    // handle the click event
+  }, []);
+  return <MyChild onClick={handleClick} />;
+}
+```
 ### useContext() =
 
 ## Available Scripts

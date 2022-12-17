@@ -100,7 +100,8 @@ root.render(<Timer />);
    При первоначальном рендеринге значение , которое вы получите useMemo, будет результатом вызова вашего вычисления .
    При каждом последующем рендеринге React будет сравнивать зависимости с зависимостями, которые вы передали во время последнего рендеринга. Если ни одна из зависимостей не изменилась (по сравнению с Object.is), useMemoвернет значение, которое вы уже вычислили ранее. В противном случае React повторно запустит ваш расчет и вернет новое значение.
    https://beta.reactjs.org/apis/react/useMemo
-```import { useMemo } from 'react';
+```
+   import { useMemo } from 'react';
 
    function TodoList({ todos, tab, theme }) {
    const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);

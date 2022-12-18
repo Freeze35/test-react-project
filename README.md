@@ -121,7 +121,7 @@ root.render(<Timer />);
    import React, { useCallback } from 'react';
 function MyComponent() {
   const handleClick = useCallback(() => {
-    // handle the click event
+    console.log('Clicked!');
   }, []);
   return <MyChild onClick={handleClick} />;
 }
@@ -131,6 +131,8 @@ function MyComponent() {
 ## Available Scripts
 In the project directory, you can run:
 
+
+   
 ### `npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

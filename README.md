@@ -101,9 +101,9 @@ root.render(<Timer />);
    При каждом последующем рендеринге React будет сравнивать зависимости с зависимостями, которые вы передали во время последнего рендеринга. Если ни одна из зависимостей не изменилась (по сравнению с Object.is), useMemoвернет значение, которое вы уже вычислили ранее. В противном случае React повторно запустит ваш расчет и вернет новое значение.
    https://beta.reactjs.org/apis/react/useMemo
 ```
-   import { useMemo } from 'react';
+import { useMemo } from 'react';
 
-   function TodoList({ todos, tab, theme }) {
+function TodoList({ todos, tab, theme }) {
    const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
 }
    ```
@@ -115,13 +115,13 @@ root.render(<Timer />);
 Это может улучшить производительность.
 Крючки useCallbackи useMemoпохожи. Основное отличие состоит в том, что useMemoвозвращает запомненное значение и useCallbackвозвращает запомненную функцию.
 ```
-   import React, { useCallback } from 'react';
-   function MyComponent() {
+import React, { useCallback } from 'react';
+function MyComponent() {
      const handleClick = useCallback(() => {
        console.log('Clicked!');
      }, []);
      return <MyChild onClick={handleClick} />;
-   }
+}
 ```
 ### useContext() =
 React Context — это способ глобального управления состоянием.
@@ -131,8 +131,8 @@ React Context — это способ глобального управлени�
 Чтобы создать контекст, вы должны импортировать createContextи инициализировать его.
 Оберните дочерние компоненты в Context Provider и укажите значение состояния useState("Jesse Hall") value={user}.
 ```
-   import { useState, createContext, useContext } from "react";
-   function Component1() {
+import { useState, createContext, useContext } from "react";
+function Component1() {
      const [user, setUser] = useState("Jesse Hall");
 
      return (
@@ -141,11 +141,11 @@ React Context — это способ глобального управлени�
          <Component2 user={user} />
        </UserContext.Provider>
      );
-   }
+}
 ```
    Получить доступ к контексту пользователя во всех компонентах:
 ```
-   function Component5() {
+function Component5() {
   const user = useContext(UserContext);
 
   return (

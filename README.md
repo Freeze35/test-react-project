@@ -116,15 +116,46 @@ root.render(<Timer />);
 Крючки useCallbackи useMemoпохожи. Основное отличие состоит в том, что useMemoвозвращает запомненное значение и useCallbackвозвращает запомненную функцию.
 ```
    import React, { useCallback } from 'react';
-function MyComponent() {
-  const handleClick = useCallback(() => {
-    console.log('Clicked!');
-  }, []);
-  return <MyChild onClick={handleClick} />;
-}
+   function MyComponent() {
+     const handleClick = useCallback(() => {
+       console.log('Clicked!');
+     }, []);
+     return <MyChild onClick={handleClick} />;
+   }
 ```
 ### useContext() =
+React Context — это способ глобального управления состоянием.
+Его можно использовать вместе с useStateхуком, чтобы легче обмениваться состоянием между глубоко вложенными компонентами, чем useStateотдельно.
+Состояние должно храниться самым высоким родительским компонентом в стеке, которому требуется доступ к состоянию.
 
+Чтобы создать контекст, вы должны импортировать createContextи инициализировать его.
+Оберните дочерние компоненты в Context Provider и укажите значение состояния useState("Jesse Hall") value={user}.
+```
+   import { useState, createContext, useContext } from "react";
+   function Component1() {
+     const [user, setUser] = useState("Jesse Hall");
+
+     return (
+       <UserContext.Provider value={user}>
+         <h1>{`Hello ${user}!`}</h1>
+         <Component2 user={user} />
+       </UserContext.Provider>
+     );
+   }
+```
+   Получить доступ к контексту пользователя во всех компонентах:
+```
+   function Component5() {
+  const user = useContext(UserContext);
+
+  return (
+    <>
+      <h1>Component 5</h1>
+      <h2>{`Hello ${user} again!`}</h2>
+    </>
+  );
+}
+```
 ## Available Scripts
 In the project directory, you can run:
 
@@ -219,29 +250,4 @@ graph TD;
    Paginatin-->hooks-->useTotalPosts-->Paginatin
    PostList-->PostItem
    PostItem-->PostList
-```
-
-```mermaid
-  sequenceDiagram;
-   App->>+context_index.js: AuthContext
-   context_index.js-->>App: AuthContext=createContext(null)
-   App->>BrowserRouter:Navbar,AppRouter
-   BrowserRouter->>Navbar:Navbar,AppRouter
-```
-```mermaid
-  sequenceDiagram;
-    participant Alice
-    participant John
-
-    rect rgb(191, 223, 255)
-    note right of Alice: Alice calls John.
-    Alice->>+John: Hello John, how are you?
-    rect rgb(200, 150, 255)
-    Alice->>+John: John, can you hear me?
-    John-->>-Alice: Hi Alice, I can hear you!
-    end
-    John-->>-Alice: I feel great!
-    end
-    Alice ->>+ John: Did you want to go to the game tonight?
-    John -->>- Alice: Yeah! See you there.
 ```

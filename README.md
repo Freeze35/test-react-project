@@ -11,10 +11,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Ссылка на видеокур по React Js:https://youtu.be/GNrdg3PzpJQ?list=PL6DxKON1uLOFJ5_dDcX7G1osKnsBlCaaT (Я не являюсь автором курса/I am not the author of the course/)
 
-### useState() = https://reactjs.org/docs/hooks-state.html / https://www.w3schools.com/react/react_usestate.asp
-
+### useState() = 
 Первое значение count— это наше текущее состояние./ The first value of count is our current state.
-Второе значение — setCount функция, которая используется для обновления нашего состояния./ The second value is the setCount function, which is used to update our state.
+Второе значение — setCount функция, которая используется для обновления нашего состояния./ The second value is the setCount function, which is used to update our state. https://reactjs.org/docs/hooks-state.html / https://www.w3schools.com/react/react_usestate.asp
 
 ``` import React, { useState } from 'react';
 
@@ -29,8 +28,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
                 </button>
          </div>);}
 ```
-### useEffect() = https://www.w3schools.com/react/react_useeffect.asp
-Хук useEffect позволяет вам выполнять побочные эффекты в ваших компонентах.
+### useEffect() = 
+Хук useEffect позволяет вам выполнять побочные эффекты в ваших компонентах. https://www.w3schools.com/react/react_useeffect.asp
 Некоторые примеры побочных эффектов: выборка данных, непосредственное обновление DOM и таймеры.
 useEffect принимает два аргумента. Второй аргумент является необязательным. Если оставить пустую зависимость функция повторяться, Если поставить [] рендеринг будет происхродить 1 раз происходить только один раз.(При изменении зависимости [dependence] происходит повторный ренндер <function>).
 
@@ -205,7 +204,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 ### Deployment
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### rsc - быстрое развёртывание снипета для создание формы. 
+### rsc - быстрое развёртывание снипета для создание формы. (При использовании WebStorm - среда разработки от JetBrains)
    https://habr.com/ru/company/kts/blog/653283/
 
 Component relationship diagram/Диаграмма взаимосвязей компонентов:

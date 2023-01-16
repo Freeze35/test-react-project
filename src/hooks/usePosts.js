@@ -11,7 +11,7 @@ export const useSortedPosts = (posts,sort) =>{
     }, [sort, posts])
 }
 export const usePosts = (posts, sort, query) => {
-    /*поиск по спикску*/
+    /*поиск по списку*/
     const sortedPosts = useSortedPosts(posts, sort);
     return useMemo(() => {
         return sortedPosts.filter(post => post.title.toLowerCase().includes(query.toLowerCase()))

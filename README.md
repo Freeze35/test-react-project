@@ -9,7 +9,7 @@
 Этот проект был загружен с помощью [Create React App]/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Ссылка на видеокур по React Js:https://youtu.be/GNrdg3PzpJQ?list=PL6DxKON1uLOFJ5_dDcX7G1osKnsBlCaaT (Я не являюсь автором курса/I am not the author of the course/)
+Ссылка на видеокур по React Js:https://youtu.be/GNrdg3PzpJQ?list=PL6DxKON1uLOFJ5_dDcX7G1osKnsBlCaaT (Я не являюсь автором курса/I am not the author of the course)
 
 ### useState() = 
 Первое значение count— это наше текущее состояние./ The first value of count is our current state.

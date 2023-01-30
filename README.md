@@ -30,12 +30,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ```
 ### useEffect() = 
 Хук useEffect позволяет вам выполнять побочные эффекты в ваших компонентах. https://www.w3schools.com/react/react_useeffect.asp
+https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects
 Некоторые примеры побочных эффектов: выборка данных, непосредственное обновление DOM и таймеры.
 useEffect принимает два аргумента. Второй аргумент является необязательным. Если оставить пустую зависимость функция повторяться, Если поставить [] рендеринг будет происхродить 1 раз происходить только один раз.(При изменении зависимости [dependence] происходит повторный ренндер <function>).
 
 useEffect (function, dependency)
    
 Хук useEffect построен таким образом, что мы можем вернуть функцию внутри него, и именно в этой функции возврата происходит очистка. Функция очистки предотвращает утечку памяти и устраняет некоторые ненужные и нежелательные действия.
+![image](https://user-images.githubusercontent.com/72322938/215440191-8ba2630d-243b-4b56-ab0e-2e6e1eae2e58.png)
    https://daily-dev-tips.com/posts/react-useeffect-cleanup/
    
    Пример отчистки таймера: 
@@ -110,9 +112,9 @@ function TodoList({ todos, tab, theme }) {
 ### useCallback() =
    
 Это позволяет нам изолировать ресурсоемкие функции, чтобы они не запускались автоматически при каждом рендеринге.
-Хук useCallbackзапускается только при обновлении одной из его зависимостей.
+Хук useCallback запускается только при обновлении одной из его зависимостей.
 Это может улучшить производительность.
-Крючки useCallbackи useMemo похожи. Основное отличие состоит в том, что useMemoвозвращает запомненное значение и useCallbackвозвращает запомненную функцию.
+Крючки useCallback и useMemo похожи. Основное отличие состоит в том, что useMemo возвращает запомненное значение и useCallback возвращает запомненную функцию.
 ```
 import React, { useCallback } from 'react';
 function MyComponent() {
@@ -124,10 +126,10 @@ function MyComponent() {
 ```
 ### useContext() =
 React Context — это способ глобального управления состоянием.
-Его можно использовать вместе с useStateхуком, чтобы легче обмениваться состоянием между глубоко вложенными компонентами, чем useStateотдельно.
+Его можно использовать вместе с useState хуком, чтобы легче обмениваться состоянием между глубоко вложенными компонентами, чем useState отдельно.
 Состояние должно храниться самым высоким родительским компонентом в стеке, которому требуется доступ к состоянию.
 
-Чтобы создать контекст, вы должны импортировать createContextи инициализировать его.
+Чтобы создать контекст, вы должны импортировать createContext и инициализировать его.
 Оберните дочерние компоненты в Context Provider и укажите значение состояния useState("Jesse Hall") value={user}.
 ```
 import { useState, createContext, useContext } from "react";
@@ -155,6 +157,9 @@ function Component5() {
   );
 }
 ```
+###useNavigate() //Old useHistory/Старый useHistory хук
+https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
+
 ## Available Scripts
 In the project directory, you can run:
 

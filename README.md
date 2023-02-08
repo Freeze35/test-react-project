@@ -32,7 +32,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Хук useEffect позволяет вам выполнять побочные эффекты в ваших компонентах. https://www.w3schools.com/react/react_useeffect.asp
 https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects
 Некоторые примеры побочных эффектов: выборка данных, непосредственное обновление DOM и таймеры.
-useEffect принимает два аргумента. Второй аргумент является необязательным. Если оставить пустую зависимость функция повторяться, Если поставить [] рендеринг будет происхродить 1 раз происходить только один раз.(При изменении зависимости [dependence] происходит повторный ренндер <function>).
+useEffect принимает два аргумента. Второй аргумент является необязательным. Если оставить пустую зависимость функция повториться, Если поставить [] рендеринг будет происхродить 1 раз.(При изменении зависимости [dependence] происходит повторный ренндер <function>).
 
 useEffect (function, dependency)
    
@@ -100,7 +100,7 @@ root.render(<Timer />);
    
    Чтобы кэшировать вычисление между повторными рендерингами, оберните его useMemo вызовом на верхнем уровне вашего компонента.
    При первоначальном рендеринге значение , которое вы получите useMemo, будет результатом вызова вашего вычисления .
-   При каждом последующем рендеринге React будет сравнивать зависимости с зависимостями, которые вы передали во время последнего рендеринга. Если ни одна из зависимостей не изменилась (по сравнению с Object.is), useMemoвернет значение, которое вы уже вычислили ранее. В противном случае React повторно запустит ваш расчет и вернет новое значение.
+   При каждом последующем рендеринге React будет сравнивать зависимости с зависимостями, которые вы передали во время последнего рендеринга. Если ни одна из зависимостей не изменилась (по сравнению с Object.is), useMemo вернет значение, которое вы уже вычислили ранее. В противном случае React повторно запустит ваш расчет и вернет новое значение.
    https://beta.reactjs.org/apis/react/useMemo
 ```
 import { useMemo } from 'react';
@@ -114,7 +114,6 @@ function TodoList({ todos, tab, theme }) {
    
 Это позволяет нам изолировать ресурсоемкие функции, чтобы они не запускались автоматически при каждом рендеринге.
 Хук useCallback запускается только при обновлении одной из его зависимостей.
-Это может улучшить производительность.
 Крючки useCallback и useMemo похожи. Основное отличие состоит в том, что useMemo возвращает запомненное значение и useCallback возвращает запомненную функцию.
 ```
 import React, { useCallback } from 'react';
@@ -159,12 +158,44 @@ function Component5() {
 }
 ```
 ###useNavigate() //Old useHistory/Старый useHistory хук
+Используется для перезхода к определенному элементу
 https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
 
-## Available Scripts
-In the project directory, you can run:
+<BrowserRouter>: BrowerRouter — это реализация маршрутизатора, которая может включать маршрутизацию в React. 
+Обернуть BrowserRouter возможно как на верхнем так и на нижнем уровне вложенности
+```
+const App = () => {
 
+    return (
+        <BrowserRouter>
+          <NavBar/>
+          <AppRouter/>
+        </BrowserRouter>
+    );
+};
+```
+Создаем в AppRouter, Route по которым будем перемещаться.
+path="*" путь в hhttp строке на котором будет происходить навигатция (В данном случае все пути ("*") будет переадресовывать на "/shop")
+element к которому будем перемещаться element={<Component/>}
+```
+const AppRouter = () => {
+    const {user} = useContext(Context)
+    const SHOP_ROUTE = "/shop"
+    return (
 
+        <Routes>
+            {user.isAuth && authRoutes.map(({path, Component}) =>
+                <Route key={path} path={path} element={<Component/>}/>
+            )}
+            {publicRoutes.map(({path, Component}) =>
+                <Route key={path} path={path} element={<Component/>}/>)}
+            <Route path="*" element={<Navigate replace to={SHOP_ROUTE}/>}/>
+        </Routes>
+
+    );
+};
+```
+\
    
 ### `npm start`
 Runs the app in the development mode.\
@@ -194,21 +225,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Learn More
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### rsc - быстрое развёртывание снипета для создание формы. (При использовании WebStorm - среда разработки от JetBrains)
    https://habr.com/ru/company/kts/blog/653283/
